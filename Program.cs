@@ -26,6 +26,17 @@ namespace NuclearPizza {
             } else {
                 Console.WriteLine("Shutdown failed");
             }
+
+            myPizza.callSteve();
+            myPizza.callSteve("hello steve. My professor keeps making simpsons references, can you come over and help.");
+
+            HarshaDam myHarshaDam = new HarshaDam();
+            CommunicateWithSteve(myHarshaDam, "dam is done");
+            CommunicateWithSteve(myPizza, "the pizza is ready");
+        }
+        static void CommunicateWithSteve(TellSteve ts, String msg)  // programming to the interface
+        {
+            ts.callSteve(msg);
         }
     }
 }
